@@ -5,6 +5,9 @@
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
+# Destination test
+test/dest
+
 # Logs
 logs
 *.log
