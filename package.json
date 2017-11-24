@@ -1,0 +1,32 @@
+{
+  "name": "@rxrc/curator",
+  "version": "0.0.0",
+  "description": "Config curator.",
+  "main": "index.js",
+  "homepage": "https://github.com/rxrc/curator",
+  "bugs": "https://github.com/rxrc/curator/issues",
+  "repository": "rxrc/curator",
+  "license": "MIT",
+  "author": {
+    "name": "Evan Sosenko",
+    "email": "razorx@evansosenko.com"
+  },
+  "files": [
+    "package-lock.json",
+    "index.js",
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "test": "standard",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
