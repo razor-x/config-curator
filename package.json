@@ -18,7 +18,9 @@
     "bin"
   ],
   "scripts": {
+    "pretest": "rimraf test/dest",
     "test": "standard",
+    "posttest": "node ./bin/curator.js ./test/manifest.js",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
@@ -27,6 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "rimraf": "^2.6.2",
     "standard": "^10.0.3"
   }
 }

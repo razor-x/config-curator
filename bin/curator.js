@@ -1,17 +1,17 @@
 const path = require('path')
-const os = require('os')
 
 const curator = require('../lib')
 
 if (require.main === module) {
-  const manifest = require(path.resolve(process.cwd(), 'manifest.js'))
+  const manifest = process.argv[2]
+    ? path.resolve(process.argv[2])
+    : path.resolve(process.cwd(), 'manifest.js')
 
-  curator(
-    manifest({hostname: os.hostname()})
-  ).then(() => {
+  curator(require(manifest)).then(() => {
     console.log('Done')
+    process.exit()
   }).catch(err => {
-    console.error('Fail: ', err)
+    console.error(err)
     process.exit(1)
   })
 }
