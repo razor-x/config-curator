@@ -2,7 +2,7 @@
   "name": "@rxrc/curator",
   "version": "0.0.0",
   "description": "Config curator.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": "bin/curator.js",
   "homepage": "https://github.com/rxrc/curator",
   "bugs": "https://github.com/rxrc/curator/issues",
