@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict'
+
 const path = require('path')
 
 const curator = require('../lib')

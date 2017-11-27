@@ -1,3 +1,5 @@
+'use strict'
+
 const src = 'test/root'
 
 const directories = []
