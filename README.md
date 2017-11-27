@@ -5,7 +5,29 @@
 
 ## Description
 
-Config curator.
+Config curator is CLI tool for installing static configuration files.
+
+- Minimal: written in Node.js using only the standard library
+  and a few system calls.
+- Secure: no additional third party dependencies (except `rsync`)
+  and a small codebase for easy review.
+- Fast: uses maximal concurrency for all file operations.
+
+To try it out, clone this repo, run `npm install` and then `npm test`.
+This will install the configuration defined in `test/manifest.js`
+to `test/dest`.
+
+## Requirements
+
+- Linux or macOS with [rsync] installed.
+- [Node.js] version 8 or above.
+- For conditional configuration based on installed packages,
+  the following package managers are supported: [Pacman] or [Homebrew].
+
+[Homebrew]: https://brew.sh/
+[Node.js]: https://nodejs.org/
+[Pacman]: https://www.archlinux.org/pacman/
+[rsync]: https://rsync.samba.org/
 
 ## Installation
 
@@ -15,7 +37,16 @@ Add this as a development dependency to your project using [npm] with
 $ npm install --save-dev @rxrc/curator
 ```
 
+Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
+so you man run this with `npm run curator`.
+
 [npm]: https://www.npmjs.com/
+[npm scripts]: https://docs.npmjs.com/misc/scripts
+
+## Usage
+
+Create a `manifest.js` file to define the configuration
+and run `npm run curator` to install the configuration.
 
 ## License
 
