@@ -1,0 +1,36 @@
+---
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: node:carbon
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-{{ arch }}-
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          key: npm-{{ arch }}-{{ epoch }}
+          paths: ~/.npm
+      - run:
+          name: Test package
+          command: npm test
+      - deploy:
+          name: Publish package
+          command: |
+            if [[ -n "${CIRCLE_TAG}" ]]; then
+              echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+              npm publish
+            fi
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
