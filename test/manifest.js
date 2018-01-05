@@ -2,6 +2,9 @@
 
 const src = 'test/root'
 
+const pkgMan = 'noop'
+const io = 'noop'
+
 const directories = []
 
 const files = [{
@@ -15,4 +18,4 @@ const symlinks = []
 
 const root = `${__dirname}/dest`
 
-module.exports = {directories, files, symlinks, root}
+module.exports = {directories, files, symlinks, root, io, pkgMan}
