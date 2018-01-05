@@ -5,6 +5,8 @@ const src = 'test/root'
 const pkg = 'noop'
 const io = 'noop'
 
+const unlinks = []
+
 const directories = []
 
 const files = [{
@@ -18,4 +20,4 @@ const symlinks = []
 
 const root = `${__dirname}/dest`
 
-module.exports = {directories, files, symlinks, root, io, pkg}
+module.exports = {unlinks, directories, files, symlinks, root, io, pkg}
