@@ -23,7 +23,7 @@
     "test": "standard",
     "posttest": "node ./bin/curator.js ./test/manifest.js",
     "preversion": "npm test",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "git push && git push --tags"
   },
   "engines": {
     "node": ">=8.9.0"
