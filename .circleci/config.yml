@@ -24,6 +24,8 @@ jobs:
             if [[ -n "${CIRCLE_TAG}" ]]; then
               echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
               npm publish
+            else
+              echo 'Nothing to publish: not a tag'
             fi
 
 workflows:
