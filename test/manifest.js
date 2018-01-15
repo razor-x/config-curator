@@ -5,7 +5,9 @@ const src = 'test/root'
 const pkg = undefined
 const io = undefined
 
-const unlinks = []
+const unlinks = [{
+  src
+}]
 
 const directories = []
 
