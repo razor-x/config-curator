@@ -9,7 +9,9 @@ const unlinks = [{
   src
 }]
 
-const directories = []
+const directories = [{
+  src: `${src}/etc`
+}]
 
 const files = [{
   src: `${src}/foo.conf`
@@ -18,7 +20,10 @@ const files = [{
   pkgs: ['not-a-package', 'this-either']
 }]
 
-const symlinks = []
+const symlinks = [{
+  src: `${src}/baz.conf`,
+  dst: `${src}/foo.conf`
+}]
 
 const root = `${__dirname}/dest`
 
