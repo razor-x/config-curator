@@ -2,8 +2,8 @@
 
 const src = 'test/root'
 
-const pkg = 'noop'
-const io = 'noop'
+const pkg = undefined
+const io = undefined
 
 const unlinks = []
 
