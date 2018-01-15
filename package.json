@@ -1,6 +1,6 @@
 {
   "name": "@rxrc/curator",
-  "version": "0.0.1-alpha.4",
+  "version": "0.1.0-beta.0",
   "description": "Config curator.",
   "main": "lib/index.js",
   "bin": "bin/curator.js",
