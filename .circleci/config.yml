@@ -22,10 +22,10 @@ jobs:
           paths: ~/.npm
       - run:
           name: Test package
-          command: CURATOR_IO=noop npm test
+          command: CURATOR_IO=noop CURATOR_PKG=noop npm test
       - run:
           name: Test Linux IO
-          command: CURATOR_IO=linux npm test
+          command: CURATOR_IO=linux CURATOR_PKG=noop npm test
       - deploy:
           name: Publish package
           command: |
