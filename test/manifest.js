@@ -5,6 +5,7 @@ const root = `${__dirname}/dest`
 
 const pkg = undefined
 const io = undefined
+const defaults = undefined
 
 const unlinks = [{
   src
@@ -37,4 +38,4 @@ const symlinks = [{
   pkgs: ['rsync']
 }]
 
-module.exports = {unlinks, directories, files, symlinks, root, io, pkg}
+module.exports = {unlinks, directories, files, symlinks, root, io, pkg, defaults}
