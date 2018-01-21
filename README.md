@@ -9,12 +9,21 @@
 
 Config curator is CLI tool for installing static configuration.
 
-- Minimal: written in Node.js using only the standard library
+- **Idempotent:** syncs directories, copies files,
+  creates system links, and deletes paths to ensure
+  the system will be in a consistent state after each run.
+- **Declarative**: all operations are defined
+  in a manifest file with a simple syntax.
+- **Flexible**: operations may be limited only to specific hosts
+  or only when specific packages are installed,
+  additionally, since the manifest is written in JavaScript,
+  it may include arbitrary logic.
+- **Minimal:** written in Node.js using only the standard library
   and a few system calls.
-- Secure: no additional third party dependencies (except `rsync`)
+- **Secure:** no additional third party dependencies (except `rsync`)
   and a small codebase for easy review.
   (Safe to run with `sudo` to install system files.)
-- Fast: uses maximal concurrency for all file operations.
+- **Fast:** uses maximal concurrency for all file operations.
 
 **To try it out:**
 
