@@ -39,7 +39,7 @@ $ npm install --save-dev @rxrc/curator
 ```
 
 Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
-so you man run this with `npm run curator`.
+so you may run this with `npm run curator`.
 
 [npm]: https://www.npmjs.com/
 [npm scripts]: https://docs.npmjs.com/misc/scripts
