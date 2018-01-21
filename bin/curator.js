@@ -12,7 +12,6 @@ if (require.main === module) {
     : path.resolve(process.cwd(), 'manifest.js')
 
   curator(require(manifest)).then(() => {
-    console.log('Done')
     process.exit()
   }).catch(err => {
     console.error(err)
