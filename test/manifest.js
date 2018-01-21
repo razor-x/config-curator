@@ -31,6 +31,10 @@ const files = [{
 const symlinks = [{
   src: `${src}/baz.conf`,
   dst: `${src}/foo.conf`
+}, {
+  src: `${src}/bazp.conf`,
+  dst: `${src}/foo.conf`,
+  pkgs: ['rsync']
 }]
 
 module.exports = {unlinks, directories, files, symlinks, root, io, pkg}
