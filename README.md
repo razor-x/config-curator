@@ -43,7 +43,9 @@ the following package managers are supported:
 
 - [Pacman]
 - [Homebrew]
+- [dpkg]
 
+[dpkg]: https://help.ubuntu.com/lts/serverguide/dpkg.html
 [Homebrew]: https://brew.sh/
 [Node.js]: https://nodejs.org/
 [Pacman]: https://www.archlinux.org/pacman/
