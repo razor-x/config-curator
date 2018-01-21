@@ -70,7 +70,12 @@ the following package managers are supported:
 ## Usage
 
 Create a `manifest.js` file to define the configuration
-and run `npm run curator` to install the configuration.
+and run the `curator` command to install the configuration.
+
+- The location of the manifest file may be passed as the first argument,
+  otherwise it looks for `manifest.js` in the current working directory.
+- The environment variables `CURATOR_IO` and `CURATOR_PKG` may be set
+  to override the `io` and `pkg` values from the manifest.
 
 ## Similar Software
 
