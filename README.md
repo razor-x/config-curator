@@ -1,7 +1,8 @@
 # Config Curator
 
 [![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
-[![github](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/rxrc/curator)
+[![github](https://img.shields.io/badge/github-rxrc/curator-blue.svg)](https://github.com/rxrc/curator)
+[![license](https://img.shields.io/github/license/rxrc/curator.svg)](https://github.com/rxrc/curator)
 [![David](https://img.shields.io/david/rxrc/curator.svg)](https://david-dm.org/rxrc/curator)
 [![CircleCI](https://img.shields.io/circleci/project/github/rxrc/curator.svg)](https://circleci.com/gh/rxrc/curator)
 
