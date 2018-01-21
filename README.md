@@ -10,7 +10,7 @@
 **CLI tool for installing static configuration.**
 
 - **Idempotent:** syncs directories, copies files,
-  creates system links, and deletes paths to ensure
+  creates system links, deletes paths, and sets access permissions to ensure
   the system will be in a consistent state after each run.
 - **Declarative**: all operations are defined
   in a manifest file with a simple syntax.
