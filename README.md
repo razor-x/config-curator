@@ -32,14 +32,18 @@ to `test/dest`.
 
 ## Installation
 
-Add this as a development dependency to your project using [npm] with
+1. Add this as a development dependency to your project using [npm] with
 
-```
-$ npm install --save-dev @rxrc/curator
-```
+    ```
+    $ npm install --save-dev @rxrc/curator
+    ```
 
-Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
-so you may run this with `npm run curator`.
+2. Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
+   so you may run this with
+   
+    ```
+    $ npm run curator
+    ```
 
 [npm]: https://www.npmjs.com/
 [npm scripts]: https://docs.npmjs.com/misc/scripts
