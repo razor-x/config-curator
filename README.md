@@ -14,9 +14,14 @@ Config curator is CLI tool for installing static configuration files.
   and a small codebase for easy review.
 - Fast: uses maximal concurrency for all file operations.
 
-To try it out, clone this repo, run `npm install` and then `npm test`.
-This will install the configuration defined in `test/manifest.js`
-to `test/dest`.
+
+**To try it out:**
+
+1. Clone this repo.
+2. Run `npm install`.
+3. Run `npm test`:
+   This will install the configuration
+   defined in `test/manifest.js` to `test/dest`.
 
 ## Requirements
 
