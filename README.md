@@ -37,8 +37,12 @@ Config curator is CLI tool for installing static configuration.
 
 - Linux or macOS with [rsync] installed.
 - [Node.js] version 8 or above.
-- For conditional configuration based on installed packages,
-  the following package managers are supported: [Pacman] or [Homebrew].
+
+For conditional configuration based on installed packages,
+the following package managers are supported:
+
+- [Pacman]
+- [Homebrew]
 
 [Homebrew]: https://brew.sh/
 [Node.js]: https://nodejs.org/
