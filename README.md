@@ -55,7 +55,7 @@ Config curator is CLI tool for installing static configuration.
 
 2. Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
    so you may run this with
-   
+
     ```
     $ npm run curator
     ```
@@ -67,6 +67,13 @@ Config curator is CLI tool for installing static configuration.
 
 Create a `manifest.js` file to define the configuration
 and run `npm run curator` to install the configuration.
+
+## Similar Software
+
+This is the successor to my original configuration tool written in Ruby:
+https://github.com/razor-x/config_curator.
+
+GitHub maintains an unofficial guide to dotfiles: https://dotfiles.github.io/.
 
 ## License
 
