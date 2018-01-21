@@ -14,6 +14,7 @@ if (require.main === module) {
   curator(require(manifest)).then(() => {
     process.exit()
   }).catch(err => {
+    console.log()
     console.error(err)
     process.exit(1)
   })
