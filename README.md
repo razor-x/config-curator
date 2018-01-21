@@ -5,9 +5,9 @@
 [![David](https://img.shields.io/david/rxrc/curator.svg)](https://david-dm.org/rxrc/curator)
 [![CircleCI](https://img.shields.io/circleci/project/github/rxrc/curator.svg)](https://circleci.com/gh/rxrc/curator)
 
-## Description
+> CLI tool for installing static configuration.
 
-Config curator is CLI tool for installing static configuration.
+## Description
 
 - **Idempotent:** syncs directories, copies files,
   creates system links, and deletes paths to ensure
