@@ -6,14 +6,14 @@
 
 ## Description
 
-Config curator is CLI tool for installing static configuration files.
+Config curator is CLI tool for installing static configuration.
 
 - Minimal: written in Node.js using only the standard library
   and a few system calls.
 - Secure: no additional third party dependencies (except `rsync`)
   and a small codebase for easy review.
+  (Safe to run with `sudo` to install system files.)
 - Fast: uses maximal concurrency for all file operations.
-
 
 **To try it out:**
 
