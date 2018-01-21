@@ -33,6 +33,50 @@
    This will install the configuration
    defined in `test/manifest.js` to `test/dest`.
 
+**Simple manifest file:**
+
+```js
+'use strict'
+
+const os = require('os')
+
+const root = os.homedir()
+
+const unlinks = [{
+  src: 'old.conf'
+}]
+
+const directories = [{
+  src: '.config/envs'
+}, {
+  src: 'vim',
+  dst: '.vim'
+}, {
+  src: 'private',
+  dmode: '0700',
+  fmode: '0600',
+  user: 'root',
+  group: 'wheel'
+}]
+
+const files = [{
+  src: '.zshrc'
+}, {
+  src: `keys/${os.hostname()}`,
+  dst: '.ssh/id_rsa',
+  fmode: '0600',
+  pkgs: ['openssh']
+}]
+
+const symlinks = [{
+  src: '.config/env.conf',
+  dst: '.config/envs.${os.hostname()}.conf',
+  hosts: ['alpha', 'delta']
+}]
+
+module.exports = {root, unlinks, directories, files, symlinks}
+```
+
 ## Requirements
 
 - Linux or macOS with [rsync] installed.
