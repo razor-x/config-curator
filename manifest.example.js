@@ -6,7 +6,7 @@
  * Use __dirname to refer to the location of this file
  * and process.cwd() for the current working directory.
  *
- * Default: current working directory.
+ * Default: a ./dest folder under the current working directory.
  */
 const root = require('os').homedir()
 
