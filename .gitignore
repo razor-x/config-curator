@@ -1,12 +1,12 @@
 # Parts of this file were adapted from
 # GitHub’s collection of .gitignore file templates
-# which are Copyright (c) 2017 GitHub, Inc.
+# which are Copyright (c) 2018 GitHub, Inc.
 # and released under the MIT License.
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
-# Destination test
-test/dest
+# Yarn lockfile (only package-lock.json supported)
+yarn.lock
 
 # Logs
 logs
@@ -66,3 +66,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# next.js build output
+.next
