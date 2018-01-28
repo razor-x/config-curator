@@ -1,6 +1,16 @@
 'use strict'
 
-/* All destination paths are prefixed with this.
+/* Prefix for all source paths
+ * except for unlinks and symlinks which use targetRoot below.
+ *
+ * Use __dirname to refer to the location of this file
+ * and process.cwd() for the current working directory.
+ *
+ * Default: the current working directory.
+ */
+const originRoot = require('os').homedir()
+
+/* Prefix for all destination paths.
  * For unlinks and symlinks, the source is also prefixed.
  *
  * Use __dirname to refer to the location of this file
@@ -8,18 +18,18 @@
  *
  * Default: a ./dest folder under the current working directory.
  */
-const root = require('os').homedir()
+const targetRoot = require('os').homedir()
 
-/* The package lookup backend to use:
+/* Package lookup backend to use:
  * pacman, dpkg, homebrew, pkgng, or noop.
  *
  * The special value noop will assume all packages are installed.
  *
  * Default: attempt to autodetect, fallback to noop.
  */
-const pkg = 'homebrew'
+const pkgType = 'homebrew'
 
-/* The I/O backend to use:
+/* I/O backend to use:
  * linux, macos, or noop.
  *
  * The special value noop will not perform any modifications
@@ -27,9 +37,9 @@ const pkg = 'homebrew'
  *
  * Default: attempt to autodetect, fallback to noop.
  */
-const io = 'macos'
+const ioType = 'macos'
 
-/* The defaults to use for each operation.
+/* Defaults to use for each operation.
  *
  * Default: shown below.
  */
@@ -59,7 +69,7 @@ const defaults = {
 
 /* Unlink (unconditionally remove) the directory, file, or symlink at src.
  *
- * The src is relative to the root.
+ * The src is relative to the global targetRoot option.
  */
 const unlinks = [{
   // Remove ~/intruders on all host.
@@ -74,7 +84,8 @@ const unlinks = [{
 /* Synchronize the contents of the directory at src to dst
  * and sets the directory and file permissions.
  *
- * The dst is relative to the root.
+ * The src is relative to the global originRoot option.
+ * The dst is relative to the global targetRoot option.
  *
  * NOTE: this WILL remove files in dst that are not in src.
  *
@@ -101,7 +112,8 @@ const directories = [{
 /* Copy the file at src to dst
  * and sets the file permissions.
  *
- * The dst is relative to the root.
+ * The src is relative to the global originRoot option.
+ * The dst is relative to the global targetRoot option.
  *
  * NOTE: this WILL replace the file at dst.
  *
@@ -125,7 +137,7 @@ const files = [{
 
 /* Create a system link (symlink) at src pointing to dst.
  *
- * The src and dst is relative to the root.
+ * The src and dst are relative to the global targetRoot option.
  *
  * NOTE: this WILL replace the file at src.
  */
@@ -150,8 +162,9 @@ module.exports = {
   directories,
   files,
   symlinks,
-  root,
-  io,
-  pkg,
+  originRoot,
+  targetRoot,
+  ioType,
+  pkgType,
   defaults
 }
