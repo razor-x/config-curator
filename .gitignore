@@ -5,6 +5,9 @@
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
+# Test directories
+test/dest
+
 # Yarn lockfile (only package-lock.json supported)
 yarn.lock
 
