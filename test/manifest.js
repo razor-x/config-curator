@@ -31,11 +31,13 @@ const files = [{
 
 const symlinks = [{
   src: 'baz.conf',
-  dst: 'foo.conf'
+  dst: 'foo.conf',
+  order: 20
 }, {
   src: 'bazp.conf',
   dst: 'foo.conf',
-  pkgs: ['rsync']
+  pkgs: ['rsync'],
+  order: 10
 }]
 
 module.exports = {
