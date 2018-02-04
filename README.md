@@ -9,20 +9,20 @@
 
 **CLI tool for installing static configuration or dotfiles.**
 
-- **Idempotent:** syncs directories, copies files,
+- 🐐 **Idempotent:** syncs directories, copies files,
   creates system links, deletes paths, and sets access permissions to ensure
   the system will be in a consistent state after each run.
-- **Declarative**: all operations are defined
+- 🦉 **Declarative**: all operations are defined
   in a manifest file with a simple syntax.
-- **Flexible**: operations may be limited only to specific hosts
+- 🐍 **Flexible**: operations may be limited only to specific hosts
   or only when specific packages are installed,
   additionally, since the manifest is written in JavaScript,
   it may include arbitrary logic.
-- **Minimal:** written in &lt; 500 lines of code
+- 🐹 **Minimal:** written in &lt; 500 lines of code
   using only the Node.js standard library and a few system calls.
-- **Secure:** no additional third party dependencies (except `rsync`):
+- 🐡 **Secure:** no additional third party dependencies (except `rsync`):
   safe to run with `sudo` to install system files.
-- **Fast:** uses maximal concurrency
+- 🦅 **Fast:** uses maximal concurrency
   and allows custom ordering of groups of operations.
 
 
