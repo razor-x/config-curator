@@ -191,11 +191,10 @@ const defaults = {
 
 /* Operations to perform by type.
  *
- * Operations always happen in this order:
- * unlinks, directories, files, and symlinks.
+ * Operations always happen in this order: unlinks, directories, files, and symlinks.
  *
- * Each type of operations waits
- * until the previous type has completed successfully.
+ * Each type of operations waits until the previous type has completed successfully.
+ *
  * Operations of each type with equal order value are always done in parallel,
  * but operations with a later order do not start until earlier ones complete.
  *
@@ -249,12 +248,11 @@ const directories = [{
   hosts: ['enterprise', 'defiant'],
   pkgs: ['turbolift', 'transporter']
 }, {
-  // Install sickbay first, then install the meds and beds.
+  // Install sickbay first, then install the beds and meds.
   src: 'decks/sickbay',
   dst: 'sickbay',
   order: 10
 }, {
-  // Then
   src: 'beds',
   dst: 'sickbay/beds',
   order: 11
