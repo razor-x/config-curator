@@ -182,6 +182,7 @@ const ioType = 'macos'
  * Default: shown below.
  */
 const defaults = {
+  order: 100, // all operations start with this order value
   dmode: '0750', // files have user write, group read, other no access
   fmode: '0640', // directories have user write, group read, other no access
   user: process.getuid(), // current user
@@ -191,10 +192,12 @@ const defaults = {
 /* Operations to perform by type.
  *
  * Operations always happen in this order:
- * unlinks, directories, files, symlinks.
+ * unlinks, directories, files, and symlinks.
+ *
  * Each type of operations waits
  * until the previous type has completed successfully.
- * All operations of a specific type are done in parallel.
+ * Operations of each type with equal order value are always done in parallel,
+ * but operations with a later order do not start until earlier ones complete.
  *
  * Specifying an array of hostnames will restrict that
  * operation to matching hosts (case insensitive).
@@ -245,6 +248,20 @@ const directories = [{
   fmode: '0644',
   hosts: ['enterprise', 'defiant'],
   pkgs: ['turbolift', 'transporter']
+}, {
+  // Install sickbay first, then install the meds and beds.
+  src: 'decks/sickbay',
+  dst: 'sickbay',
+  order: 10
+}, {
+  // Then
+  src: 'beds',
+  dst: 'sickbay/beds',
+  order: 11
+}, {
+  src: 'meds',
+  dst: 'sickbay/meds',
+  order: 11
 }]
 
 /* Copy the file at src to dst
