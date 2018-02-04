@@ -210,10 +210,10 @@ const defaults = {
  * The src is relative to the global targetRoot option.
  */
 const unlinks = [{
-  // Remove ~/intruders on all host.
+  // Remove ~/intruders on all hosts.
   src: 'intruders'
 }, {
-  // Remove ~/warpcore on host enterprise if the eject package is installed.
+  // Remove ~/warpcore on host enterprise, if the eject package is installed.
   src: 'warpcore',
   hosts: ['enterprise'],
   pkgs: ['eject']
@@ -234,9 +234,9 @@ const directories = [{
   src: 'holodeck'
 }, {
   // Synchronize ./panels/exploding to ~/bridge/panels
-  // and set specific user, group, and access permissions
-  // on hosts enterprise and defiant
-  // if the turbolift and transporter packages are installed.
+  // on hosts enterprise and defiant,
+  // if the turbolift and transporter packages are installed,
+  // and set specific user, group, and access permissions.
   src: 'panels/exploding',
   dst: 'bridge/panels',
   user: 'numberone',
@@ -262,8 +262,8 @@ const files = [{
   src: 'bay/torpedo'
 }, {
   // Copy ./phaser to ~/brig/phaser
-  // and set the user, group, and access permissions
-  // on host defiant if the stun package is installed.
+  // on host defiant, if the stun package is installed,
+  // and set the user, group, and access permissions.
   src: 'phaser',
   dst: 'brig/phaser',
   user: 'warf',
