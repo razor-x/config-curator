@@ -25,7 +25,8 @@
 - **Fast:** uses maximal concurrency
   and allows custom ordering of groups of operations.
 
-**To try it out:**
+
+#### Try it out
 
 1. Clone this repo.
 2. Run `npm install`.
@@ -324,6 +325,12 @@ This is the successor to my original configuration tool written in Ruby:
 https://github.com/razor-x/config_curator.
 
 GitHub maintains an unofficial guide to dotfiles: https://dotfiles.github.io/.
+
+## Users
+
+_If you are using Config Curator, add a link here and open a pull request._
+
+- [My Arch Linux configuration.](https://github.com/rxrc/archrc)
 
 ## Contributing
 
