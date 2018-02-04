@@ -7,7 +7,7 @@
 
 ## Description
 
-**CLI tool for installing static configuration.**
+**CLI tool for installing static configuration or dotfiles.**
 
 - **Idempotent:** syncs directories, copies files,
   creates system links, deletes paths, and sets access permissions to ensure
