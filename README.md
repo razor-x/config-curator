@@ -18,12 +18,12 @@
   or only when specific packages are installed,
   additionally, since the manifest is written in JavaScript,
   it may include arbitrary logic.
-- **Minimal:** written in Node.js using only the standard library
-  and a few system calls.
-- **Secure:** no additional third party dependencies (except `rsync`)
-  and a small codebase for easy review.
-  (Safe to run with `sudo` to install system files.)
-- **Fast:** uses maximal concurrency for all file operations.
+- **Minimal:** written in &lt; 500 lines of code
+  using only the Node.js standard library and a few system calls.
+- **Secure:** no additional third party dependencies (except `rsync`):
+  safe to run with `sudo` to install system files.
+- **Fast:** uses maximal concurrency
+  and allows custom ordering of groups of operations.
 
 **To try it out:**
 
