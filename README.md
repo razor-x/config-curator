@@ -37,14 +37,9 @@
 
 - Linux or macOS with [rsync] installed.
 - [Node.js] version 8 or above.
-
-For conditional configuration based on installed packages,
-the following package managers are supported:
-
-- [Pacman]
-- [Homebrew]
-- [dpkg]
-- [pkgng]
+- For conditional configuration based on installed packages,
+  the following package managers are supported:
+  [Pacman], [Homebrew], [dpkg], or [pkgng].
 
 [dpkg]: https://help.ubuntu.com/lts/serverguide/dpkg.html
 [Homebrew]: https://brew.sh/
