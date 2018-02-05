@@ -1,6 +1,6 @@
 # Config Curator
-☄️
-**🐲 CLI tool for installing static configuration or dotfiles.**
+
+**☄️  CLI tool for installing static configuration or dotfiles.**
 
 [![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
 [![github](https://img.shields.io/badge/github-rxrc/curator-blue.svg)](https://github.com/rxrc/curator)
