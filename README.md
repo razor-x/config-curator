@@ -1,4 +1,6 @@
 # Config Curator
+☄️
+**🐲 CLI tool for installing static configuration or dotfiles.**
 
 [![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
 [![github](https://img.shields.io/badge/github-rxrc/curator-blue.svg)](https://github.com/rxrc/curator)
@@ -7,12 +9,10 @@
 
 ## Description
 
-**CLI tool for installing static configuration or dotfiles.**
-
-- 🐐 **Idempotent:** syncs directories, copies files,
+- 🦉 **Idempotent:** syncs directories, copies files,
   creates system links, deletes paths, and sets access permissions to ensure
   the system will be in a consistent state after each run.
-- 🦉 **Declarative**: all operations are defined
+- 🐬 **Declarative**: all operations are defined
   in a manifest file with a simple syntax.
 - 🐍 **Flexible**: operations may be limited only to specific hosts
   or only when specific packages are installed,
