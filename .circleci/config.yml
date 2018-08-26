@@ -16,7 +16,7 @@ jobs:
             apt-get install -y rsync
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
       - save_cache:
           key: npm-{{ arch }}-{{ epoch }}
           paths: ~/.npm
