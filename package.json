@@ -29,6 +29,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "standard": "^14.3.1"
+    "standard": "^16.0.0"
   }
 }
