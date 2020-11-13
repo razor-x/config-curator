@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 1.0.1 / 2018-08-05
+## [1.0.2] / 2020-11-14
+
+### Changed
+
+- Update development dependencies.
+
+## [1.0.1] / 2018-08-05
 
 ### Added
 
@@ -19,5 +25,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release.
 
-[Unreleased]: https://github.com/rxrc/curator/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/rxrc/curator/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/rxrc/curator/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/rxrc/curator/compare/v1.0.0...v1.0.1
