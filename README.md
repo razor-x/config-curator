@@ -331,6 +331,7 @@ GitHub maintains an unofficial guide to dotfiles: https://dotfiles.github.io/.
 _If you are using Config Curator, add a link here and open a pull request._
 
 - [My Arch Linux configuration.](https://github.com/rxrc/archrc)
+- [My dotfiles.](https://github.com/rxrc/dotfiles)
 - [krlanguet's dotfiles.](https://github.com/krlanguet/dotfiles)
 
 ## Contributing
