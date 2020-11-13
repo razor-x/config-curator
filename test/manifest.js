@@ -1,7 +1,9 @@
 'use strict'
 
-const originRoot = `${__dirname}/root`
-const targetRoot = `${__dirname}/dest`
+const path = require('path')
+
+const originRoot = path.join(__dirname, 'root')
+const targetRoot = path.join(__dirname, 'dest')
 
 const pkgType = undefined
 const ioType = undefined
