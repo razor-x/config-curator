@@ -2,8 +2,6 @@
 
 [![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
 [![github](https://img.shields.io/badge/github-rxrc/curator-blue.svg)](https://github.com/rxrc/curator)
-[![David](https://img.shields.io/david/rxrc/curator.svg)](https://david-dm.org/rxrc/curator)
-[![CircleCI](https://img.shields.io/circleci/project/github/rxrc/curator.svg)](https://circleci.com/gh/rxrc/curator)
 
 **CLI tool for installing static configuration or dotfiles.**
 
