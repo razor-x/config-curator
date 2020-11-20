@@ -72,6 +72,8 @@ and run the `curator` command to install the configuration.
 
 - The manifest configuration is defined below.
   Copy the example manifest from [`manifest.example.js`](./manifest.example.js).
+- The manifest should be the default export and may be an object, function,
+  promise, or async function.
 - The location of the manifest file may be passed as the first argument,
   otherwise it looks for `manifest.js` in the current working directory.
 - The environment variables `CURATOR_IO` and `CURATOR_PKG` may be set
@@ -302,6 +304,8 @@ const symlinks = [{
 }]
 
 /* Export each value set above.
+ * The export may be a plain object as below, or a function, promise,
+ * or async function that returns the plain object.
  * Simply do not export an option to use the default.
  */
 module.exports = {
