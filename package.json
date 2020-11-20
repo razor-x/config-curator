@@ -19,8 +19,9 @@
     "bin"
   ],
   "scripts": {
-    "test": "standard",
-    "posttest": "node ./bin/curator.js ./test/manifest.js",
+    "test": "node ./bin/curator.js ./test/manifest.js",
+    "pretest": "standard",
+    "format": "standard --fix",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
@@ -29,6 +30,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "standard": "^16.0.0"
+    "standard": "^16.0.3"
   }
 }
