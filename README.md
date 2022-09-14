@@ -1,7 +1,7 @@
 # ☄️ Config Curator
 
 [![npm](https://img.shields.io/npm/v/config-curator.svg)](https://www.npmjs.com/package/config-curator)
-[![github](https://img.shields.io/badge/github-razor-x/config-curator-blue.svg)](https://github.com/razor-x/config-curator)
+[![main](https://github.com/razor-x/config-curator/actions/workflows/main.yml/badge.svg)](https://github.com/razor-x/config-curator/actions/workflows/main.yml)
 
 **CLI tool for installing static configuration or dotfiles.**
 
