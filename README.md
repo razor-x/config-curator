@@ -1,7 +1,7 @@
 # ☄️ Config Curator
 
 [![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
-[![github](https://img.shields.io/badge/github-rxrc/curator-blue.svg)](https://github.com/rxrc/curator)
+[![github](https://img.shields.io/badge/github-razor-x/curator-blue.svg)](https://github.com/razor-x/curator)
 
 **CLI tool for installing static configuration or dotfiles.**
 
@@ -342,7 +342,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/rxrc/curator/fork).
+1. Fork it (https://github.com/razor-x/curator/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).

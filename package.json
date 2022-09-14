@@ -4,9 +4,9 @@
   "description": "Config curator.",
   "main": "lib/index.js",
   "bin": "bin/curator.js",
-  "homepage": "https://github.com/rxrc/curator",
-  "bugs": "https://github.com/rxrc/curator/issues",
-  "repository": "rxrc/curator",
+  "homepage": "https://github.com/razor-x/curator",
+  "bugs": "https://github.com/razor-x/curator/issues",
+  "repository": "razor-x/curator",
   "license": "MIT",
   "author": {
     "name": "Evan Sosenko",
