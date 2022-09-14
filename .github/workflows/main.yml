@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           cache: npm
-          node_version: ${{ matrix.node }}
+          node-version: ${{ matrix.node }}
       - name: Install dependencies
         run: npm ci
       - name: Test
