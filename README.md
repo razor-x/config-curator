@@ -1,6 +1,6 @@
 # ☄️ Config Curator
 
-[![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
+[![npm](https://img.shields.io/npm/v/config-curator.svg)](https://www.npmjs.com/package/config-curator)
 [![github](https://img.shields.io/badge/github-razor-x/config-curator-blue.svg)](https://github.com/razor-x/config-curator)
 
 **CLI tool for installing static configuration or dotfiles.**
@@ -52,7 +52,7 @@
 1. Add this as a development dependency to your project using [npm] with
 
     ```
-    $ npm install --save-dev @rxrc/curator
+    $ npm install --save-dev config-curator
     ```
 
 2. Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
