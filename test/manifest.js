@@ -1,9 +1,7 @@
-'use strict'
+import path from 'path'
 
-const path = require('path')
-
-const originRoot = path.join(__dirname, 'root')
-const targetRoot = path.join(__dirname, 'dest')
+const originRoot = path.join('test', 'root')
+const targetRoot = path.join('test', 'dest')
 
 const pkgType = undefined
 const ioType = undefined
@@ -53,7 +51,7 @@ const symlinks = [
   }
 ]
 
-module.exports = {
+export default {
   unlinks,
   directories,
   files,

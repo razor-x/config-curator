@@ -1,23 +1,13 @@
 #!/usr/bin/env node
 
-'use strict'
+import path from 'path'
 
-const path = require('path')
+import curator from '../lib/index.js'
 
-const curator = require('../lib')
+const manifestPath = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.resolve(process.cwd(), 'manifest.js')
 
-if (require.main === module) {
-  const manifest = process.argv[2]
-    ? path.resolve(process.argv[2])
-    : path.resolve(process.cwd(), 'manifest.js')
+const manifest = await import(manifestPath)
 
-  curator(require(manifest))
-    .then(() => {
-      process.exit()
-    })
-    .catch((err) => {
-      console.log()
-      console.error(err)
-      process.exit(1)
-    })
-}
+await curator(manifest.default)

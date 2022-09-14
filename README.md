@@ -1,7 +1,7 @@
 # ☄️ Config Curator
 
-[![npm](https://img.shields.io/npm/v/@rxrc/curator.svg)](https://www.npmjs.com/package/@rxrc/curator)
-[![github](https://img.shields.io/badge/github-razor-x/config-curator-blue.svg)](https://github.com/razor-x/config-curator)
+[![npm](https://img.shields.io/npm/v/config-curator.svg)](https://www.npmjs.com/package/config-curator)
+[![main](https://github.com/razor-x/config-curator/actions/workflows/main.yml/badge.svg)](https://github.com/razor-x/config-curator/actions/workflows/main.yml)
 
 **CLI tool for installing static configuration or dotfiles.**
 
@@ -52,7 +52,7 @@
 1. Add this as a development dependency to your project using [npm] with
 
     ```
-    $ npm install --save-dev @rxrc/curator
+    $ npm install --save-dev config-curator
     ```
 
 2. Add a [script][npm scripts] to your `package.json` with `"curator": "curator"`
@@ -86,9 +86,7 @@ and run the `curator` command to install the configuration.
 ```js
 /* manifest.js */
 
-'use strict'
-
-const os = require('os')
+import os from 'os'
 
 const targetRoot = os.homedir()
 
@@ -135,7 +133,13 @@ const symlinks = [
   }
 ]
 
-module.exports = { targetRoot, unlinks, directories, files, symlinks }
+export default {
+  targetRoot,
+  unlinks,
+  directories,
+  files,
+  symlinks
+}
 ```
 
 #### Complete manifest API
@@ -143,27 +147,25 @@ module.exports = { targetRoot, unlinks, directories, files, symlinks }
 ```js
 /* manifest.js */
 
-'use strict'
+import os from 'os'
 
 /* Prefix for all source paths
  * except for unlinks and symlinks which use targetRoot below.
  *
- * Use __dirname to refer to the location of this file
- * and process.cwd() for the current working directory.
+ * Use process.cwd() for the current working directory.
  *
  * Default: the current working directory.
  */
-const originRoot = require('os').homedir()
+const originRoot = os.homedir()
 
 /* Prefix for all destination paths.
  * For unlinks and symlinks, the source is also prefixed.
  *
- * Use __dirname to refer to the location of this file
- * and process.cwd() for the current working directory.
+ * Use process.cwd() for the current working directory.
  *
  * Default: a ./dest folder under the current working directory.
  */
-const targetRoot = require('os').homedir()
+const targetRoot = os.homedir()
 
 /* Package lookup backend to use:
  * pacman, dpkg, homebrew, pkgng, or noop.
@@ -334,7 +336,7 @@ const symlinks = [
  * or async function that returns the plain object.
  * Simply do not export an option to use the default.
  */
-module.exports = {
+export default {
   unlinks,
   directories,
   files,

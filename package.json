@@ -1,8 +1,11 @@
 {
-  "name": "@rxrc/curator",
+  "name": "config-curator",
   "version": "1.1.0",
   "description": "Config curator.",
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./index.js"
+  },
   "bin": "bin/curator.js",
   "homepage": "https://github.com/razor-x/config-curator",
   "bugs": "https://github.com/razor-x/config-curator/issues",
@@ -26,7 +29,8 @@
     "postversion": "git push && git push --tags"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=14.15.0",
+    "npm": ">= 8.1.0"
   },
   "devDependencies": {
     "prettier": "^2.3.0",
