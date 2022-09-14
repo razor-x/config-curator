@@ -20,9 +20,10 @@
   ],
   "scripts": {
     "test": "node ./bin/curator.js ./test/manifest.js",
-    "pretest": "standard",
+    "pretest": "node ./lib/index.js",
+    "lint": "standard",
     "format": "standard --fix",
-    "preversion": "npm test",
+    "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml)'",
     "postversion": "git push && git push --tags"
   },
   "engines": {
@@ -30,6 +31,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "prettier": "^2.3.0",
     "standard": "^17.0.0"
   }
 }
