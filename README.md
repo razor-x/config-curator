@@ -92,39 +92,50 @@ const os = require('os')
 
 const targetRoot = os.homedir()
 
-const unlinks = [{
-  src: 'old.conf'
-}]
+const unlinks = [
+  {
+    src: 'old.conf'
+  }
+]
 
-const directories = [{
-  src: '.config/envs'
-}, {
-  src: 'vim',
-  dst: '.vim'
-}, {
-  src: 'private',
-  dmode: '0700',
-  fmode: '0600',
-  user: 'root',
-  group: 'wheel'
-}]
+const directories = [
+  {
+    src: '.config/envs'
+  },
+  {
+    src: 'vim',
+    dst: '.vim'
+  },
+  {
+    src: 'private',
+    dmode: '0700',
+    fmode: '0600',
+    user: 'root',
+    group: 'wheel'
+  }
+]
 
-const files = [{
-  src: '.zshrc'
-}, {
-  src: `keys/${os.hostname()}`,
-  dst: '.ssh/id_rsa',
-  fmode: '0600',
-  pkgs: ['openssh']
-}]
+const files = [
+  {
+    src: '.zshrc'
+  },
+  {
+    src: `keys/${os.hostname()}`,
+    dst: '.ssh/id_rsa',
+    fmode: '0600',
+    pkgs: ['openssh']
+  }
+]
 
-const symlinks = [{
-  src: '.config/env.conf',
-  dst: '.config/envs.${os.hostname()}.conf',
-  hosts: ['alpha', 'delta']
-}]
+const symlinks = [
+  {
+    src: '.config/env.conf',
+    dst: '.config/envs.${os.hostname()}.conf',
+    hosts: ['alpha', 'delta']
+  }
+]
 
-module.exports = {targetRoot, unlinks, directories, files, symlinks}
+module.exports = { targetRoot, unlinks, directories, files, symlinks }
 ```
 
 #### Complete manifest API
@@ -207,15 +218,18 @@ const defaults = {
  *
  * The src is relative to the global targetRoot option.
  */
-const unlinks = [{
-  // Remove ~/intruders on all hosts.
-  src: 'intruders'
-}, {
-  // Remove ~/warpcore on host enterprise, if the eject package is installed.
-  src: 'warpcore',
-  hosts: ['enterprise'],
-  pkgs: ['eject']
-}]
+const unlinks = [
+  {
+    // Remove ~/intruders on all hosts.
+    src: 'intruders'
+  },
+  {
+    // Remove ~/warpcore on host enterprise, if the eject package is installed.
+    src: 'warpcore',
+    hosts: ['enterprise'],
+    pkgs: ['eject']
+  }
+]
 
 /* Synchronize the contents of the directory at src to dst
  * and sets the directory and file permissions.
@@ -227,36 +241,42 @@ const unlinks = [{
  *
  * If dst is not given, will use src as the subpath.
  */
-const directories = [{
-  // Synchronize ./holodeck to ~/holodeck on all hosts.
-  src: 'holodeck'
-}, {
-  // Synchronize ./panels/exploding to ~/bridge/panels
-  // on hosts enterprise and defiant,
-  // if the turbolift and transporter packages are installed,
-  // and set specific user, group, and access permissions.
-  src: 'panels/exploding',
-  dst: 'bridge/panels',
-  user: 'numberone',
-  group: 'officers',
-  dmode: '0755',
-  fmode: '0644',
-  hosts: ['enterprise', 'defiant'],
-  pkgs: ['turbolift', 'transporter']
-}, {
-  // Install sickbay first, then install the beds and meds.
-  src: 'decks/sickbay',
-  dst: 'sickbay',
-  order: 10
-}, {
-  src: 'beds',
-  dst: 'sickbay/beds',
-  order: 11
-}, {
-  src: 'meds',
-  dst: 'sickbay/meds',
-  order: 11
-}]
+const directories = [
+  {
+    // Synchronize ./holodeck to ~/holodeck on all hosts.
+    src: 'holodeck'
+  },
+  {
+    // Synchronize ./panels/exploding to ~/bridge/panels
+    // on hosts enterprise and defiant,
+    // if the turbolift and transporter packages are installed,
+    // and set specific user, group, and access permissions.
+    src: 'panels/exploding',
+    dst: 'bridge/panels',
+    user: 'numberone',
+    group: 'officers',
+    dmode: '0755',
+    fmode: '0644',
+    hosts: ['enterprise', 'defiant'],
+    pkgs: ['turbolift', 'transporter']
+  },
+  {
+    // Install sickbay first, then install the beds and meds.
+    src: 'decks/sickbay',
+    dst: 'sickbay',
+    order: 10
+  },
+  {
+    src: 'beds',
+    dst: 'sickbay/beds',
+    order: 11
+  },
+  {
+    src: 'meds',
+    dst: 'sickbay/meds',
+    order: 11
+  }
+]
 
 /* Copy the file at src to dst
  * and sets the file permissions.
@@ -268,21 +288,24 @@ const directories = [{
  *
  * If dst is not given, will use src as the subpath.
  */
-const files = [{
-  // Copy ./bay/torpedo to ~/bay/torpedo on all hosts.
-  src: 'bay/torpedo'
-}, {
-  // Copy ./phaser to ~/brig/phaser
-  // on host defiant, if the stun package is installed,
-  // and set the user, group, and access permissions.
-  src: 'phaser',
-  dst: 'brig/phaser',
-  user: 'warf',
-  group: 'security',
-  fmode: '0600',
-  hosts: ['defiant'],
-  pkgs: ['stun']
-}]
+const files = [
+  {
+    // Copy ./bay/torpedo to ~/bay/torpedo on all hosts.
+    src: 'bay/torpedo'
+  },
+  {
+    // Copy ./phaser to ~/brig/phaser
+    // on host defiant, if the stun package is installed,
+    // and set the user, group, and access permissions.
+    src: 'phaser',
+    dst: 'brig/phaser',
+    user: 'warf',
+    group: 'security',
+    fmode: '0600',
+    hosts: ['defiant'],
+    pkgs: ['stun']
+  }
+]
 
 /* Create a system link (symlink) at src pointing to dst.
  *
@@ -290,18 +313,21 @@ const files = [{
  *
  * NOTE: this WILL replace the file at src.
  */
-const symlinks = [{
-  // Create a symlink from ~/drink to ~/tea/earlgray/hot on all hosts.
-  src: 'drink',
-  dst: 'tea/earlgray/hot'
-}, {
-  // Create a symlink from ~/hypospray to ~/hyposprays/norepinephrine
-  // on host enterprise if the sickbay package is installed.
-  src: 'hypospray',
-  dst: 'hyposprays/norepinephrine',
-  hosts: ['enterprise'],
-  pkgs: ['sickbay']
-}]
+const symlinks = [
+  {
+    // Create a symlink from ~/drink to ~/tea/earlgray/hot on all hosts.
+    src: 'drink',
+    dst: 'tea/earlgray/hot'
+  },
+  {
+    // Create a symlink from ~/hypospray to ~/hyposprays/norepinephrine
+    // on host enterprise if the sickbay package is installed.
+    src: 'hypospray',
+    dst: 'hyposprays/norepinephrine',
+    hosts: ['enterprise'],
+    pkgs: ['sickbay']
+  }
+]
 
 /* Export each value set above.
  * The export may be a plain object as below, or a function, promise,
